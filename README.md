@@ -1,38 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# City-Finder
+An exercise to build a game where the user tries to locate a city on a label free map to within 50km.
 
-## Getting Started
+<img src='./city-finder.png' width='800'/>
 
-First, run the development server:
+# Requirements
+1.The player will see a map of Europe without Streets + Cities (Only Country X borders). Their
+mission is to find the right location of the city name on this map. After placing the needle pin,
+the game will show you the right location of the city and the difference between the user needle 
+pin and the city in kilometers. If it is within 50km of the city, the selection will be defined as
+'location found'.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+2.In the beginning, the player has a total of 1500 that symbolizes kilometers. At each round the difference between the position of the city and the needle pin, if over 50km, will reduce the total by the same amount.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.The game ends when no kilometers are left or if the end has been reached. The final score is the amount of cities the user has found.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# Technologies
+Typescript •
+Next JS •
+React • 
+Bootstrap • 
+Leaflet • 
+Node JS
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Getting Started
+Clone this repository then run the following commands: 
+  - npm install
+  - npm run dev
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# possible further development
+ - more cities to be added and selected at random.
+ - timer to be introduced and capture who copmplets the round in the quickest time.
+ - backend could be implemented to allow scores/time to be recorded (e.g. mongoDB).
+ - leaderboard could be added as an additonal page.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Author
+<h3>Robert Bish</h3>
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a href='https://www.linkedin.com/in/robert-bish-1a6a8637'>
+  <img src='https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white' alt='LinkedIn Badge'/>
+</a>
+<a href='https://robertbishwebdeveloper.com'>
+  <img src='https://img.shields.io/badge/Portfolio-darkgreen?style=for-the-badge&logo=portfolio&logoColor=white' alt='Portfolio Badge'/>
+</a>
+<a href='https://www.facebook.com/robert.bish.9'>
+  <img src='https://img.shields.io/badge/Facebook-darkblue?style=for-the-badge&logo=facebook&logoColor=white' alt='Facebook Badge'/>
+</a>
