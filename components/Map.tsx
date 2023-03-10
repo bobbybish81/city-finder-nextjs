@@ -3,7 +3,9 @@ import { AppContext } from '../pages/_app';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import cityCoordinates from '../coordinates/cityCoordinates';
 import distance from '../modules/distance';
+import markerIconPng from "leaflet/dist/images/marker-icon.png"
 import L from 'leaflet';
+import {Icon} from 'leaflet'
 import 'leaflet/dist/leaflet.css';
 
 interface MapProps {

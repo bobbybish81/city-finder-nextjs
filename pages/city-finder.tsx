@@ -18,7 +18,7 @@ const CityFinder = () => {
   return (
     <>
       {state.started ? 
-      <main className='main d-flex flex-column justify-content-center align-items-center'>
+      <main className='main d-flex flex-column justify-content-center align-items-center bg-dark'>
         <h1 className='mt-1 mb-2 mx-auto'>{cityCoordinates.cities[state.index].name}</h1>
         <div className='distance-score'>
           <div 
@@ -46,7 +46,7 @@ const CityFinder = () => {
           <NextButton/>
       </main>
       :
-      <main className='main d-flex flex-column justify-content-center align-items-center'>
+      <main className='main d-flex flex-column justify-content-center align-items-center bg-dark'>
       <HomeButton/>
       </main>}
     </>

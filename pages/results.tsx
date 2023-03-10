@@ -12,7 +12,7 @@ const Results = () => {
   return (
     <>
       {state.showResults ?
-      <main className='main d-flex flex-column justify-content-center align-items-center'>
+      <main className='main d-flex flex-column justify-content-center align-items-center bg-dark'>
         <section className='results'>
           {state.index < cityCoordinates.cities.length -1 ?
           <>
@@ -32,7 +32,7 @@ const Results = () => {
         <HomeButton/>
       </main> :
 
-      <main className='main d-flex flex-column justify-content-center align-items-center'>
+      <main className='main d-flex flex-column justify-content-center align-items-center bg-dark'>
         <HomeButton/>
       </main>}
     </>

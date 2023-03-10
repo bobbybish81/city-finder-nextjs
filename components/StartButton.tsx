@@ -10,7 +10,7 @@ const StartButton = () => {
 
   return (
     <section
-      className='d-flex flex-column justify-content-center align-items-center my-4 mx-auto'>
+      className='buttonSection'>
       <button
         onClick={() => {
           setState({

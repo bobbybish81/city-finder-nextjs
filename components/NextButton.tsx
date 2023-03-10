@@ -10,7 +10,7 @@ const NextButton = () => {
 
   return (
     <section
-      className='d-flex flex-column justify-content-center align-items-center my-4 mx-auto'
+      className='buttonSection'
       style={{ height: '4rem'}}>
 
       {!state.playing && !state.showResults ?

@@ -8,7 +8,7 @@ const HomeButton = () => {
   const router = useRouter();
 
   return (
-    <div className='d-flex flex-column justify-content-center align-items-center my-4 mx-auto'>
+    <section className='buttonDiv'>
       <button
         onClick={() => {
           setState({
@@ -25,7 +25,7 @@ const HomeButton = () => {
           });
           router.push('/')
         }}>Return to Home Page</button>
-  </div>
+  </section>
   )
 }
 
