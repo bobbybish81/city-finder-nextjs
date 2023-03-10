@@ -8,8 +8,9 @@
 }
 
 .main {
-  background-image: url('../public/space.webp');
-  background-size: cover;
+  /* background-image: url('../public/space.webp');
+  background-size: cover; */
+  background-color: #000;
   color: #fff;
   padding: 2rem;
   min-height: 100vh;
