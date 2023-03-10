@@ -9,15 +9,16 @@
 
 html,
 body {
-  min-height: 100vh;
-  max-width: 100vw;
   overflow-x: hidden;
 }
 
-body {
-  background-color: #000;
-  color: #fff;
+main {
+  background-image: url('../public/space.webp');
+  background-size: cover;
   padding: 2rem;
+  color: #fff;
+  min-height: 100vh;
+  max-width: 100vw;
 }
 
 a {

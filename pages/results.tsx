@@ -33,7 +33,6 @@ const Results = () => {
       </main> :
 
       <main className='d-flex flex-column justify-content-center align-items-center'>
-        <h1 className='my-5 mx-auto font-italic text-center'>Something has gone wrong....</h1>
         <HomeButton/>
       </main>}
     </>
