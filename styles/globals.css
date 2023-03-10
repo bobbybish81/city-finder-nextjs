@@ -15,8 +15,7 @@ body {
 }
 
 body {
-  background-image: url('../public/space.jpg');
-  background-size: cover;
+  background-color: #000;
   color: #fff;
   padding: 2rem;
 }
