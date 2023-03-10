@@ -15,7 +15,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='d-flex flex-column justify-content-center align-items-center'>
+      <main className='main d-flex flex-column justify-content-center align-items-center'>
         <h1 className='mb-4 text-center'>WELCOME TO CITY FINDER!</h1>
         <h4 className='mb-4 text-center'>YOUR MISSION: Find the location of the city on the map to within 50km.</h4>
         <section>
