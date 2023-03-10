@@ -24,6 +24,7 @@ Node JS
 Clone this repository then run the following commands: 
   - npm install
   - npm run dev
+  - application running at http://localhost:3000
 
 # possible further development
  - more cities to be added and selected at random.
