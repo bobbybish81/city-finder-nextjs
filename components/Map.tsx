@@ -100,7 +100,6 @@ const MapClickHandler = (props: { onClick: (e: L.LeafletMouseEvent) => void }) =
             icon={L.divIcon({
               className: 'locationMarker',
               html: locationLabel,
-              zIndexOffset: 1
             })}>
           </Marker>
         )}
