@@ -90,7 +90,8 @@ const MapClickHandler = (props: { onClick: (e: L.LeafletMouseEvent) => void }) =
         center={[50, 1]}
         zoomControl={false}
         scrollWheelZoom={false}
-        zoom={5}>
+        zoom={5}
+        maxZoom={5}>
         <TileLayer
           url='https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png'
           attribution='©Leaflet, ©CartoDB'/>
