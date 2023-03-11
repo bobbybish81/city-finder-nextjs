@@ -26,7 +26,7 @@ const Guide = () => {
       <p className='mb-3'>
         <b>3. </b>When the city name appears at the top of the page, scroll through the map and click where you believe the location of the city to be.</p>
       <p className='mb-3'>
-        <b>4. </b>After making you guess, the game will display the correct location of the city with a red marker and the difference in kilometers between your guess and the correct location.</p>
+        <b>4. </b>After making you guess, the game will display the correct location of the city with a blue marker and the difference in kilometers between your guess and the correct location.</p>
       <p className='mb-3'>
         <b>5. </b>If your guess is within 50km of the correct location, one point will be added to your score and no kilometers will be deducted from the total.
       </p>
