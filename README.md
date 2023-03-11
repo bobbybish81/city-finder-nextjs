@@ -26,8 +26,9 @@ Clone this repository then run the following commands:
   - npm run dev
   - application running at http://localhost:3000
 
-# possible further development
+# Further enhancements
  - more cities to be added and selected at random.
+ - svg icons to replace html in Marker component.
  - timer to be introduced and capture who completes the round in the quickest time.
  - backend could be implemented to allow scores/time to be recorded (e.g. mongoDB).
  - leaderboard could be added as an additonal page.

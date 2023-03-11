@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../pages/_app';
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMapEvents, Popup } from 'react-leaflet';
 import cityCoordinates from '../coordinates/cityCoordinates';
 import distance from '../modules/distance';
-import markerIconPng from "leaflet/dist/images/marker-icon.png"
-import L from 'leaflet';
-import {Icon} from 'leaflet'
 import 'leaflet/dist/leaflet.css';
+import * as L from 'leaflet';
 
 interface MapProps {
   distanceDiff: number,
@@ -51,15 +49,24 @@ const Map = ({ setDistanceDiff, distanceDiff } : MapProps) => {
         showResults: true,
       });
     }
-    if (state.index === cityCoordinates.cities.length -1) {
+    if (state.kilometers - distanceDiff >= 0 && state.index === cityCoordinates.cities.length -1) {
       setState({
         ...state,
+        playing: false,
+        citiesFound: distanceDiff <= 50 ? state.citiesFound + 1 : state.citiesFound,
+        kilometers: distanceDiff <= 50 ? state.kilometers : state.kilometers - distanceDiff,
+        location: {
+          lat: cityCoordinates.cities[state.index].position.lat,
+          lng: cityCoordinates.cities[state.index].position.lng,
+        },
+        guessLocation: {
+          lat: e.latlng.lat,
+          lng: e.latlng.lng,
+        },
         showResults: true,
       });
     }
   };
-
-// import the LeafletMouseEvent types from the leaflet library to handle the onclick event and log the coordinates of the clicked location.
 
 const MapClickHandler = (props: { onClick: (e: L.LeafletMouseEvent) => void }) => {
     useMapEvents({
@@ -68,10 +75,8 @@ const MapClickHandler = (props: { onClick: (e: L.LeafletMouseEvent) => void }) =
     return null;
   }
 
-  const myIcon = L.icon({
-    iconUrl: 'https://example.com/path/to/icon.png',
-    iconSize: [38, 38],
-  });
+  const locationLabel = `<div style='position: absolute; left: 18px; top: -2px'>${cityCoordinates.cities[state.index].name}</div>`;
+  const markerClass = distanceDiff <= 50 ? 'correctMarker' : 'incorrectMarker';
 
   return (
     <section
@@ -89,16 +94,23 @@ const MapClickHandler = (props: { onClick: (e: L.LeafletMouseEvent) => void }) =
         <TileLayer
           url='https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png'
           attribution='©Leaflet, ©CartoDB'/>
-        {state.guessLocation.lat !== null && state.guessLocation.lng !== null && (
-          <Marker
-            position={[state.guessLocation.lat, state.guessLocation.lng]}
-            icon={myIcon}>
-          </Marker>
-        )}
         {state.location.lat !== null && state.location.lng !== null && (
           <Marker
             position={[state.location.lat, state.location.lng]}
-            icon={myIcon}>
+            icon={L.divIcon({
+              className: 'locationMarker',
+              html: locationLabel,
+              zIndexOffset: 1
+            })}>
+          </Marker>
+        )}
+        {state.guessLocation.lat !== null && state.guessLocation.lng !== null && (
+          <Marker
+            position={[state.guessLocation.lat, state.guessLocation.lng]}
+            icon={L.divIcon({
+              className: markerClass,
+              html: '',
+            })}>
           </Marker>
         )}
         <MapClickHandler onClick={handleClick} />

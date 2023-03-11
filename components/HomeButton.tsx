@@ -11,6 +11,7 @@ const HomeButton = () => {
     <section className='buttonDiv'>
       <button
         onClick={() => {
+          router.push('/')
           setState({
             ...state,
             started: false,
@@ -23,7 +24,6 @@ const HomeButton = () => {
             guessLocation: { lat: null, lng: null },
             showResults: false,
           });
-          router.push('/')
         }}>Return to Home Page</button>
   </section>
   )

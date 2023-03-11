@@ -30,11 +30,7 @@ const Results = () => {
           <h3 className='mb-5 mx-auto font-italic'>{reviewKm(state)}</h3>
         </section>
         <HomeButton/>
-      </main> :
-
-      <main className='main d-flex flex-column justify-content-center align-items-center bg-dark'>
-        <HomeButton/>
-      </main>}
+      </main> : null}
     </>
   )
 }

@@ -25,7 +25,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0.25rem auto;
+  margin: 2rem auto;
 }
 
 button {
@@ -60,6 +60,25 @@ button:hover {
   width: 95vw;
 }
 
+.locationMarker {
+  background-color: #2289E5;
+  border: 1px solid #000;
+  padding: 7.5px;
+  border-radius: 50%;
+  color: #000;
+}
+
+.correctMarker, .incorrectMarker {
+  background-color: #0ec917;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+  
+.incorrectMarker {
+  background-color: #DC2028;;
+}
+
 .answer {
   height: 3rem;
   display: flex;
@@ -75,31 +94,32 @@ button:hover {
 
 @media screen and (min-width: 768px) {
 
-.main {
-  padding: 2rem;
-}
+  .main {
+    padding: 2rem;
+  }
 
-.distance-score {
-  width: 600px;
-}
+  .distance-score {
+    width: 600px;
+  }
 
-.distance-score div h4,
-.distance-score div h5 {
-  font-size: 1.3rem;
-}
+  .distance-score div h4,
+  .distance-score div h5 {
+    font-size: 1.3rem;
+  }
 
-.map {
-  height: 500px;
-  width: 500px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-}
+  .map {
+    height: 500px;
+    width: 500px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
 
-.marker {
-  background-color: red;
-}
+  .marker {
+    background-color: red;
+  }
 
-.results {
-  width: 50%;
-}
+  .results {
+    width: 50%;
+  }
+
 }

@@ -19,7 +19,7 @@ const CityFinder = () => {
     <>
       {state.started ? 
       <main className='main d-flex flex-column justify-content-center align-items-center bg-dark'>
-        <h1>{cityCoordinates.cities[state.index].name}</h1>
+        <h1>{`${state.index + 1}. ${cityCoordinates.cities[state.index].name}`}</h1>
         <div className='distance-score'>
           <div 
             className='d-flex flex-column align-items-center justify-content-center'
@@ -41,8 +41,8 @@ const CityFinder = () => {
           </div>
         </div>
           <MapComponent
-          distanceDiff={distanceDiff}
-          setDistanceDiff={setDistanceDiff}/>
+            distanceDiff={distanceDiff}
+            setDistanceDiff={setDistanceDiff}/>
           <NextButton/>
       </main>
       :
