@@ -84,7 +84,6 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: -0.25px 0 #fff, 0 0.25px #fff, 0.25px 0 #fff, 0 -0.25px #fff;
 }
 
 .results {
