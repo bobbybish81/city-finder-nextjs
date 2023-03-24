@@ -3,6 +3,8 @@ An exercise to build a game where the user tries to locate a city on a label fre
 
 <img src='./city-finder.png' width='800'/>
 
+website is deployed at https://cityfinder.netlify.app
+
 # Requirements
 1 . The user will see a map of Europe without Streets + Cities (Only Country X borders). The
 objective is to find the right location of the city on this map. After placing the needle pin,
